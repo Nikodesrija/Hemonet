@@ -1,0 +1,127 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: fixed;
+    width: 100%;
+    font-size:20px;
+}
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.containe{
+    width: 500px;
+    padding: 20px;
+    margin:160px auto 0;
+    border-radius: 4px;
+    text-align: center;
+    border-top :2px solid rgba(3, 112, 114, 0.636);
+    border-left :2px solid rgba(3, 113, 114, 0.636) ;
+    border-bottom :2px solid rgba(3, 113, 114, 0.636) ;
+    border-right :2px solid rgba(3, 113, 114, 0.636) ;
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    backdrop-filter: blur(15px);
+    background:rgba(245, 245, 245, 0.636);
+    height: 550px;
+}
+.containe h3{
+    color:rgb(51, 76, 129);
+    font-size:24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding:10px;
+    text-align: center;
+}
+bdi{
+    color:red;
+}
+
+@media (max-width:480px)
+{
+    .containe
+    {
+        width:100%;
+    }
+    .inputname {
+        margin-bottom: -10px;
+    }
+    .inputname span {
+        padding: 0;
+        margin:0;
+    }
+}
+
+.text-name{
+    display :inline-block;
+    width : 100%;
+    height: 35px;
+    padding: 10px 10px ;
+    border: 1px solid #cccccc;
+    outline: none;
+    transition:  all 0.30s ease-in-out;
+}
+.text-name:hover{
+    background-color: #fafafa20;
+}
+.text-name:focus{
+    border-color: rgb(228, 113, 113);
+}
+#blood_component{
+    width : 90%;
+   max-width:500px;
+   
+    cursor:pointer;
+    padding: 1px solid #cccccc;
+    background: white;
+}
+#blood_type{
+    width : 90%;
+   max-width:500px;
+    cursor:pointer;
+    padding: 1px solid #cccccc;
+    background: white;
+}
+.blood_component:hover, .blood_component:focus{
+    background-color: #fafafa20;
+    border-color: rgb(228, 113, 113);
+    outline:none;
+    background: #fafafa;
+}
+.inputname {
+    margin-bottom: 15px;
+}
+
+.inputname label {
+    display: inline-block;
+    width: 120px; /* Adjust width as needed */
+    text-align: right; /* Align labels to the right */
+    padding-right: 25px; /* Add padding to the right of labels */
+    vertical-align: top; /* Align labels to the top */
+}
+
+.inputname input,
+.inputname select {
+    display: inline-block;
+    width: calc(100% - 150px); /* Adjust width to fit remaining space */
+    height: 45px;
+    padding: 10px 5px 20px 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    vertical-align: top; /* Align inputs to the top */
+}
+
+.button {
+    width: 90%; /* Make button span full width of container */
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.formcontainer {
+    width: 100%; /* Adjust container width as needed */
+    margin: 0 auto 10px; /* Center align the form container */
+}

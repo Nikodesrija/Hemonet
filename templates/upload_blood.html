@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Blood Details</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style4.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styl.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/up.css' %}">
+     <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}" >
+</head>
+<body>
+        <header>
+            <div class="header-area ">
+                <div class="header-top_area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-lg-8">
+                                
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-lg-4">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="{%static 'img/logo.png' %}" alt="">
+                                        <span>HEMONET</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">home</a></li>
+                                            <li><a href="login.html">login</a></li>
+                                            <li><a href="{% url 'search_blood_banks' %}">Find blood</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="login.html">Upload_Blood_details</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                            <a href="{% url 'saveform' %}">Donate Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <div class="containe">
+    <h3>Upload <bdi>Blood</bdi> Details</h3>
+    <div class="formcontainer">
+    <form method="post" action="{% url 'upload_blood' %}">
+        {% csrf_token %}
+        <div class="inputname"> 
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"  class="text-name" required>
+        </div>
+        <div class="inputname"> 
+        <label for="address">Address:</label> 
+        <input id="address" name="address" class="text-name" required>
+        </div>
+        <div class="inputname"> 
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" class="text-name" required>
+        </div>
+        <div class="inputname"> 
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" class="text-name" required>
+        </div>
+        <div class="inputname"> 
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" class="text-name" required>
+        </div>
+        <div class="inputname">
+        <select id="blood_type" class="blood_component" name="blood_type" required>
+            <option value="A+">A+Ve</option>
+            <option value="A-">A-Ve</option>
+            <option value="B+">B+Ve</option>
+            <option value="B-">B-Ve</option>
+            <option value="AB+">AB+Ve</option>
+            <option value="AB-">AB-Ve</option>
+            <option value="O+">O+Ve</option>
+            <option value="O-">O-Ve</option>
+            <option value="Oh+">Oh+Ve</option>
+            <option value="Oh-">Oh-Ve</option>
+        </select>
+        </div>
+        <div class="inputname"> 
+        <select id="blood_component" class="blood_component" name="blood_component" required>
+            <option value="whole Blood">Whole Blood</option>
+            <option value="single Donor platelet">Single Donor Platelet</option>
+            <option value="single Donor plasma">Single Donor Plasma</option>
+            <option value="sagm packed Red Blood cells">SAGM Packed Red Blood Cells</option>
+            <option value="Random Donor platelets">Random Donor Platelets</option>
+            <option value="plasma">Plasma</option>
+            <option value="platelets Rich Plasma">Platelets Rich Plasma</option>
+            <option value="Leukoreduced Rbc">Leukoreduced RBC</option>
+            <option value="cryoprecipitate">Cryoprecipitate</option>
+            <option value="Fresh Frozen Plasma">Fresh Frozen Plasma</option>
+        </select>
+        </div>
+        <div class="inputname"> 
+        <button type="submit" class="button">Submit</button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

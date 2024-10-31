@@ -1,0 +1,412 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HEMONET</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{%static 'img/logo.png' %}" alt="">
+                                    <span>HEMONET</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="{% url 'search_blood_banks' %}">Find blood</a></li>
+                                        <li><a href="{% url 'track_donation_status' %}">Donation history</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="{% url 'saveform' %}">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="slider_text ">
+                            <span>Get Started Today.</span>
+                            <h3> Be the reason<br>
+                                for someone's Heartbeat</h3>
+                                <span>Lets Donate!!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <style>
+        #moreContent {
+          display: none; /* Hide the additional content by default */
+        }
+      
+        /* Styling the link */
+        .read-more-link {
+          color: rgb(56, 57, 58); 
+          cursor: pointer;
+        }
+      </style>
+      </head>
+      <body>
+    <div class="wrapper">
+      <div id="mainContent" >
+        <h3>who can <u> Donate?</u></h3>
+        <p>1.Age between 18 and 60 years<br>
+            2. Haemoglobin - not less than 12.5 g/Dl<br>
+             3.Temperature - Normal (oral temperature not exceeding 37.50C)<br>
+             4.past one year - not been treated for Rabies or received Hepatitis B immune globulin.<br>
+             5.Past six months - not had a tattoo, ear or skin piercing or acupuncture, not received blood or blood products, <br>no serious illness or major surgery, no contact with a person with hepatitis or yellow jaundice.<br>
+             6.Past three months - not donated blood or been treated for Malaria.<br>
+             7. Past 48 hours - taken any antibiotics or any other medications (Allopathic or Ayurveda or Sidha or Homeo)</p>
+        <p class="read-more-link" onclick="showMore()">Read More</p>
+        <a href="{% url 'saveform' %}"  class="boxed-btn4">Donate Now</a>
+      </div>
+      </div>
+      <div class="wrapper">
+      <div id="moreContent">
+        <p> 8.Past 24 hours - taken alcoholic beverages<br>
+            9.Past 72 hours - had dental work or taken Aspirin<br>
+            10.Present - not suffering from cough, influenza or sore throat, common cold<br>
+            11.Women should not be pregnant or breast feeding her child<br>
+            12.Women donor should not donate during her menstrual cycles<br>
+            13.Free from Diabetes, not suffering from chest pain, heart disease or high BP, <br>cancer, blood clotting problem or blood disease, unexplained fever, weight loss, <br>fatigue, night sweats, enlarged lymph nodes in armpits, neck or groin, white patches in the mouth.</p>
+      </div>
+    </div>
+    
+    <!-- latest_activites_area_start  -->
+    <div class="latest_activites_area">
+        <div class="container">
+                <div class="col-lg-7">
+                    <div class="activites_info">
+                        <div class="section_title">
+                            <h3> <span> What is <u>Blood</u> ? </span></h3>
+                        </div>
+                        <p class="para_1">
+                            <b>Blood is a vital bodily fluid that circulates through the arteries and veins, carrying essential substances such as oxygen, nutrients, hormones, and waste products to and from cells. It consists of several components:</b><br>
+                                Red blood cells (erythrocytes): These cells carry oxygen from the lungs to the rest of the body and carbon dioxide back to the lungs for exhalation.
+                            <br> White blood cells (leukocytes): These cells are part of the body's immune system, defending against infections and foreign invaders.</br>
+                            Platelets (thrombocytes): Fragments of cells that help with blood clotting, preventing excessive bleeding when there is an injury.
+                            Plasma: The liquid portion of blood, composed mostly of water, but also containing proteins, electrolytes, hormones, and waste products.
+                        <p class="para_2"> 
+                        Blood plays a crucial role in maintaining homeostasis, regulating body temperature, pH balance, and transporting nutrients and oxygen to cells while removing waste products for elimination.</p>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- latest_activites_area_end  -->
+
+    <!-- counter_area_start  -->
+    <div class="counter_area">
+        <div class="container">
+            <div class="counter_bg overlay">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-calendar"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">100</h3>
+                                <p>Blood Banks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-heart-beat"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">150</h3>
+                                <p>Hospitals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-in-love"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">122</h3>
+                                <p>Donors</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single_counter d-flex align-items-center justify-content-center">
+                            <div class="icon">
+                                <i class="flaticon-hug"></i>
+                            </div>
+                            <div class="events">
+                                <h3 class="counter">120</h3>
+                                <p>Finished Event</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter_area_end  -->
+
+    <!-- popular_causes_area_start  -->
+    <div class="popular_causes_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Need</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="causes_active owl-carousel">
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{%static 'img/causes/p11.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                                <div class="custom_progress_bar">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="progres_count">
+                                                80%
+                                            </span>
+                                        </div>
+                                      </div>
+                                </div>
+                                <h4>Cancer</h4>
+                                <p>Certain cancers, particularly those affecting the bone marrow or blood cells (such as leukemia or lymphoma), can lead to low blood cell counts and may necessitate blood transfusions ,Cancer surgeries, especially those involving large tumors or extensive tissue removal, can result in significant blood loss. Blood transfusions may be necessary during or after surgery to replace lost blood and maintain circulation.</p>
+                                <a class="read_more" href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{%static 'img/causes/p12.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                                <div class="custom_progress_bar">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="progres_count">
+                                                70%
+                                            </span>
+                                        </div>
+                                      </div>
+                                </div>
+                               
+                                <h4>Anamea</h4>
+                                <p>This is a condition where the body lacks enough healthy red blood cells to carry adequate oxygen to the body's tissues. In cases of rapid and significant blood loss, transfusions may be required to replace lost blood and prevent  inadequate oxygen delivery.Some forms of anemia, particularly those resulting from bone marrow disorders may not respond adequately to standard treatments such as medications or dietary changes. In such cases, blood transfusions may be necessary.</p>
+                                <a class="read_more" href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="single_cause">
+                            <div class="thumb">
+                                <img src="{%static 'img/causes/p13.png' %}" alt="">
+                            </div>
+                            <div class="causes_content">
+                                <div class="custom_progress_bar">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="progres_count">
+                                                90%
+                                            </span>
+                                        </div>
+                                      </div>
+                                </div>
+                                <h4>Tuberculosis</h4>
+                                <p>Tuberculosis (TB) is a bacterial infection primarily affecting the lungs but can also affect other parts of the body. TB can lead to complications such as internal bleeding, particularly in cases of disseminated TB where the infection spreads beyond the lungs to other organs. Severe bleeding may necessitate blood transfusions to replace lost blood and stabilize the patient.In very rare cases, severe TB illness may lead to multi-organ failure where blood transfusions are required.</p>
+                                <a class="read_more" href="">Read More</a>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popular_causes_area_end  -->
+
+    
+   
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="{%static 'img/footer_logo.png' %}" alt="">
+                                    <span>HEMONET</span>
+                                </a>
+                            </div>
+                            <p class="address_text">Mother's tears cannot <br>save her child's life but<br> your Blood can...</p>
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">provinding Blood</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script>
+        function showMore() {
+          var moreText = document.getElementById("moreContent");
+        
+          if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+            // Change the text of the link
+            document.querySelector(".read-more-link").textContent = "Read Less";
+          } else {
+            moreText.style.display = "none";
+            // Change the text of the link
+            document.querySelector(".read-more-link").textContent = "Read More";
+          }
+        }
+        </script>
+    <script src="{%static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{%static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{%static 'js/popper.min.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{%static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{%static 'js/ajax-form.js' %}"></script>
+    <script src="{%static 'js/waypoints.min.js' %}"></script>
+    <script src="{%static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{%static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{%static 'js/scrollIt.js' %}"></script>
+    <script src="{%static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{%static 'js/wow.min.js' %}"></script>
+    <script src="{%static 'js/nice-select.min.js' %}"></script>
+    <script src="{%static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{%static 'js/gijgo.min.js' %}"></script>
+    <!--contact js-->
+    <script src="{%static 'js/contact.js' %}"></script>
+    <script src="{%static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{%static 'js/jquery.form.js' %}"></script>
+    <script src="{%static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{%static 'js/mail-script.js' %}"></script>
+
+    <script src="{%static 'js/main.js' %}"></script>
+</body>
+
+</html>

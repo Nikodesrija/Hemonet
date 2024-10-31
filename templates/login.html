@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
+    <title>HEMONET</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style4.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styl.css' %}">
+     <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}" >
+</head>
+<body>
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{%static 'img/logo.png' %}" alt="">
+                                    <span>HEMONET</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="{% url 'search_blood_banks' %}">Find blood</a></li>
+                                        <li><a href="login.html">Upload_Blood_details</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="{% url 'saveform' %}">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="grouper">
+        {% for message in messages %}
+        <h3> {{ message }} </h3>
+        {% endfor %}
+    </div>
+    <div class="container" >
+        <h2>Log<u>In</u></h2>
+        <div class="form-container">
+        <form action="{% url 'loginpage' %}" name="Formfill" method="post">
+            {% csrf_token %}
+        <div class="input-name">
+            <i class="fa fa-user lock" ></i>
+            <input type="text" placeholder="Username" name="username" class="text-name" required >
+        </div>
+        <div class="input-name">
+            <i class="fa fa-lock lock" ></i>
+            <input type="password" placeholder="password" name="password" class="text-name" required >
+        </div>
+        <div class="Button">
+            <input type="submit" class="button"  value="Login">
+        </div>
+        <div class="group">
+        <a href="#">Forget-Password</a>
+        </div>
+        </form>
+        </div>
+        </div>
+    </body>
+    </html>
+

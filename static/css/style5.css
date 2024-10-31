@@ -1,0 +1,121 @@
+
+body{
+    background-image: url('p8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: fixed;
+    width: 100%;
+    font-size:20px;
+}
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    padding: 30px;
+    margin:170px auto 0;
+    border-radius: 4px;
+    text-align: center;
+    border-top :2px solid rgba(114, 3, 36, 0.636);
+    border-left :2px solid rgba(114, 3, 36, 0.636) ;
+    border-bottom :2px solid rgba(114, 3, 36, 0.636);
+    border-right :2px solid rgba(114, 3, 36, 0.636);
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    background:rgba(245, 245, 245, 0.636);
+    height: 500px;
+}
+.container h1{
+    color:rgb(201, 9, 9);
+    font-size:50px;
+    line-height: 24px;
+    padding:30px;
+    text-align: center;
+}
+.input-name{
+    width: 100%;
+    position: relative;
+    margin:20px auto;
+}
+
+.button{
+   background-color: rgb(219, 9, 9);
+   color:#fafafa;
+   height:35px;
+   line-height:35px;
+   width:100%;
+   border:none;
+   outline:none;
+   font-size: 18px;
+   cursor: pointer;
+   margin-bottom: 10px;
+
+}
+.button:hover{
+    background:rgb(4, 147, 4);
+}
+@media (max-width:480px)
+{
+    .container
+    {
+        width:100%;
+    }
+    .input-name {
+        margin-bottom: -10px;
+    }
+    .input-name span {
+        padding: 0;
+        margin:0;
+    }
+    .form-container{
+        width:100%;
+    }
+}
+.button a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.bloodgroup{
+    display :inline-block;
+    width : 100%;
+    height: 35px;
+    padding: 0px 15px ;
+    cursor:pointer;
+    padding: 1px solid #cccccc;
+    background: white;
+}
+.bloodgroup:hover, .bloodgroup:focus{
+    background-color: #fafafa20;
+    border-color: rgb(228, 113, 113);
+    outline:none;
+    background: #fafafa;
+}
+.text-name{
+    width:80%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+    transition:  all 0.30s ease-in-out;
+}
+.text-name:hover{
+    background-color: #fafafa20;
+}
+.text-name:focus{
+    border-color: rgb(228, 113, 113);
+}
+.header-area .main-header-area {
+    background:  #970404fb;
+    border-radius: 10px;
+    padding: 5px 50px 0px;
+    position: fixed;
+    bottom: 30px;
+    left: 150px;
+    bottom: auto;
+    right: 150px;
+  }

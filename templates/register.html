@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
+    <title>HEMONET</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style3.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styl.css' %}">
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{%static 'img/logo.png' %}" alt="">
+                                    <span>HEMONET</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="{% url 'search_blood_banks' %}">Find blood</a></li>
+                                        <li><a href="{% url 'track_donation_status' %}">Donation history</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="{% url 'saveform' %}">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" >
+        <h2>Register<u>Now</u></h2>
+        <div class="form-container">
+            <form id="donorForm" method="post" action="{% url 'saveform' %}" name="Formfill">
+            {% csrf_token %}
+        <div class="input-name">
+            <i class="fa fa-user lock" ></i>
+            <input type="text" placeholder="First name" name="firstname" class="name" required >
+            <span> 
+                <i class="fa fa-user lock" ></i>
+                <input type="text" placeholder="last name"  name="lastname" class="name" required>
+            </span>
+        </div>
+        <div class="input-name">
+            <i class="fa fa-user lock" ></i>
+            <input type="number" placeholder="Age" name="age" class="text-name" required>
+        </div>
+        <div class="input-name">
+            <input type="radio" class="radio-button" name="gender">
+            <label style="margin-right : 30px;">Male</label>
+            <input type="radio" class="radio-button" name="gender">
+            <label style="margin-right : 30px;">Female</label>
+            <input type="radio" class="radio-button" name="gender">
+            <label>other</label>
+        </div>
+        <div class="input-name">
+            <select class="bloodgroup" name="bloodgroup">
+                <option>Select Your Blood Group</option>
+                <option>A+Ve</option>
+                <option>A-Ve</option>
+                <option>B+Ve </option>
+                <option>B-Ve </option>
+                <option>AB+Ve </option>
+                <option>AB-Ve </option>
+                <option>Oh-Ve</option>
+                <option>Oh+Ve</option>
+                <option>O+Ve </option>
+                <option>O-Ve </option>
+            </select>
+        </div>
+        <div class="input-name">
+            <i class="fa fa-envelope lock" ></i>
+            <input type="email" placeholder="Email" name="email" class="text-name" required>
+        </div>
+        <div class="input-name">
+            <i class="fa fa-phone lock" ></i>
+            <input type="tel" placeholder="phonenumber" name="phone" class="text-name" required>
+        </div>
+        <div class="input-name">
+        <i class="fa fa-address-card lock" ></i>
+            <input type="text"  placeholder="Address" name="address" class="text-name" required>
+        </div>
+        <div class="input-name">
+            <i class="fa fa-address-card lock" ></i>
+            <input type="text" placeholder="state" name="state" class="name" required>
+        <span>
+            <input type="text"  placeholder="district" name="district" class="name" required>
+        </span>
+        </div>
+        <div class="input-name">
+            <i class="fa fa-address-card lock" ></i>
+            <input type="number"  placeholder="pincode" name="pincode" class="name" required>
+            <span>
+                <i class="fa fa-calendar lock"></i>
+                <input type="date" id="schedule-date" placeholder="scheduledate" name="donation_date" class="name" required>
+            </span>
+        </div>
+        <div id="schedule-message" class="hidden">
+             * Schedule your donation
+        </div>
+        <style>
+            #schedule-message {
+                padding-top: 0px;
+                font-weight: bold;
+                text-align: end;
+                font-size: 17px;
+                color: rgb(143, 8, 37);
+            }
+            
+            .hidden {
+                display: none;
+            }
+        </style>
+        <div class="input-name">
+            <input type="submit" class="button"  onclick="validation()"   value="Register">
+        </div>
+    </form>
+    </div>
+</div>
+</div>
+<script>
+    document.getElementById('schedule-date').addEventListener('focus', function() {
+    document.getElementById('schedule-message').classList.remove('hidden');
+});
+</script>
+<script src="{%static 'js/register.js' %}" ></script>
+</body>
+</html>

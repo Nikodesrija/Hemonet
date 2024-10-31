@@ -1,0 +1,36 @@
+<!-- success.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styl.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Header Content -->
+    </header>
+    <div class="popup" id="popup">
+        <i class="fa fa-check-circle-o" ></i>
+        <h3> Registration Successful!</h3>
+        <p>Thank you for registering as a donor.</p>
+        <h3>Nearby Blood Banks</h3>
+        <ul>
+            {% for blood_bank in blood_banks %}
+                <li>
+                    <strong>Name:</strong> {{ blood_bank.name }}<br>
+                    <strong>Address:</strong> {{ blood_bank.address }}<br>
+                    <strong>Pincode:</strong> {{ blood_bank.pincode }}<br>
+                    <strong>State:</strong> {{ blood_bank.state }}<br>
+                    <strong>District:</strong> {{ blood_bank.district }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="index.html"><button onclick="closeslide()" >ok</button></a>
+    </div>
+</body>
+</html>

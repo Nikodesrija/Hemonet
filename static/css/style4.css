@@ -1,0 +1,147 @@
+body{
+    background-image: url('p3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: fixed;
+    width: 100%;
+    font-size:20px;
+}
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width: 350px;
+    padding: 20px;
+    margin:150px auto 0;
+    border-radius: 4px;
+    text-align: center;
+    border-top:5px solid rgb(12, 3, 114);
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    background: transparent;
+    height: 370px;
+}
+.container h2{
+    color:rgb(5, 34, 130);
+    font-size:50px;
+    line-height: 24px;
+    padding:30px;
+    text-align: center;
+}
+.input-name{
+    width: 90%;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    margin:20px auto;
+}
+.lock{
+    padding: 8px 11px;
+}
+.name{
+    width: 45%;
+    padding: 10px 1px 10px 50px;
+}
+.input-name input{
+    background: transparent;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    color:#fff;
+}
+.text-name{
+    width:100%;
+    padding: 8px 2px 8px 5px; 
+}
+.input-name i{
+    position:absolute;
+    font-size: 18px;
+    color:rgb(28, 5, 119);
+    right: 0;
+}
+.text-name, .name{
+    border: 1px solid #cccccc;
+    outline: none;
+    transition:  all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover{
+    background-color: #fafafa20;
+}
+.Button{
+    padding: 20px;
+}
+.group a{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 16px;
+  text-decoration: none;
+  padding: 7px 4px 10px 20px;
+  color:#fff;
+}
+.group a:focus{
+    text-decoration: underline;
+}
+.text-name:focus, .name:focus{
+    border:1px solid rgb(125, 113, 228);
+}
+.radio-button{
+    margin-right: 4px;
+}
+.button
+{
+   background-color: rgb(3, 18, 115);
+   color:#fafafa;
+   height:35px;
+   line-height:35px;
+   width:100%;
+   border:none;
+   outline:none;
+   font-size: 18px;
+   cursor: pointer;
+   margin-bottom: 8px;
+}
+.button:hover{
+    background:rgb(3, 124, 3);
+}
+.grouper h3{
+    color: rgb(212, 9, 9);
+    text-align: center;
+    margin-top: 5%;
+}
+@media (max-width:480px)
+{
+    .container
+    {
+        width:100%;
+    }
+    .input-name {
+        margin-bottom: -10px;
+    }
+    .name{
+        width:100%;
+        padding:8px 0 8px 40px;
+        margin-bottom:10px;
+    }
+    .input-name span {
+        padding: 0;
+        margin:0;
+    }
+    .form-container{
+        width:100%;
+    }
+}
+.header-area .main-header-area {
+    background: #014573e5;
+    border-radius: 10px;
+    padding: 5px 50px 0px;
+    position: fixed;
+    bottom: 30px;
+    left: 150px;
+    bottom: auto;
+    right: 150px;
+  }
+  
